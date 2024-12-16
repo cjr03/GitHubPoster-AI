@@ -1,0 +1,22 @@
+{% extends "automates_app.html" %}
+
+{% block content %}
+<div class="shadow-wrap">
+  <div class="form-wrap">
+    <h3>Signup</h3>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form }}
+      <div class="button-container">
+        <!-- Create Account Button -->
+        <button class="button small">Create Account</button>
+      </div>
+    </form>
+    <div class="button-container">
+      <!-- Create Go to Log in Button -->
+      <a href="{% url 'automates_app:login' %}" class="button small">Go to Log In</a>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+

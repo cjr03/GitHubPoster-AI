@@ -1,0 +1,100 @@
+{% extends "automates_app.html" %}
+
+{% block content %}
+<!-- Home Page Content -->
+<div class="top">
+  <!-- Logout and Account Settings Button -->
+  <a href="{% url 'automates_app:logout' %}" class="button small">Logout</a>
+  <a href="{% url 'automates_app:accounts' %}" class="button small">Account Settings</a>
+  {% load static %}
+  <script src="{% static 'js/main.js' %}" defer></script>
+</div>
+
+<div class="buffer"></div>
+
+<div class="row">
+  <!-- Left Column -->
+  <div class="column left">
+    <!-- Header Section for Repository/Draft -->
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">Pick a repository or a draft:</h2>
+    <h3 style="font-size: 1.4rem; font-weight: normal; margin-bottom: 20px;">GitHub Repositories:</h3>
+
+    <!-- Repositories Section -->
+    <div class="btn-group"></div> 
+
+    <!-- Draft Section -->
+    <h3 style="font-size: 1.4rem; font-weight: normal; margin-bottom: 20px;">Drafts:</h3>
+    <div class="draft-group"></div> 
+
+    <!-- Form for generating drafts -->
+    <form method="POST" action="{% url 'automates_app:home' %}">
+      {% csrf_token %}
+      
+      <!-- Description Selector -->
+      <div class="selector">
+        <h1>Description</h1>
+        <textarea id="description" name="description" class="description" rows="5" cols="50">Enter description here.</textarea>
+      </div>
+
+      <!-- Audience Selector -->
+      <div class="selector">
+        <h1>Audience</h1>
+        <select name="audience" id="audience" class="dropdown">
+          <option value="option1">Classmates</option>
+          <option value="option2">Employers</option>
+          <option value="option3">Co-workers</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea id="audienceTextBox" name="audienceTextBox" class="otherBox" rows="1" cols="20" style="display: none;"></textarea>
+      </div>
+
+      <!-- Style Selector -->
+      <div class="selector">
+        <h1>Style</h1>
+        <select name="style" id="style" class="dropdown">
+          <option value="option1">Professional</option>
+          <option value="option2">Academic</option>
+          <option value="option3">Corporate</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea id="styleTextBox" name="styleTextBox" class="otherBox" rows="1" cols="20" style="display: none;"></textarea>
+      </div>
+
+      <!-- Tone Selector -->
+      <div class="selector">
+        <h1>Tone</h1>
+        <select name="tone" id="tone" class="dropdown">
+          <option value="option1">Formal</option>
+          <option value="option2">Friendly</option>
+          <option value="option3">Casual</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea id="toneTextBox" name="toneTextBox" class="otherBox" rows="1" cols="20" style="display: none;"></textarea>
+      </div>
+
+      <!-- Hashtags -->
+      <div class="selector">
+        <h1>Hashtags</h1>
+        <textarea id="hashtags" name="hashtags" class="description" rows="5" cols="50">Enter hashtags here.</textarea>
+      </div>
+
+      <!-- Save to Draft Button -->
+      <button class="button small save-draft-button" style="display: block; margin-bottom: 10px;">Save to Draft</button>
+
+      <!-- Delete Draft Button -->
+      <button type="button" class="button small delete-draft-button" style="display: block; margin-bottom: 10px;">Delete Draft</button>
+
+      <!-- Generate Button -->
+      <button class="button small generate-button">Generate</button>
+    </form>
+  </div>
+
+  <!-- Generated Text -->
+<div class="column right">
+  <textarea id="generated" name="generated" class="generated" rows="15" cols="60" readonly>This is the generated description</textarea>
+  <button id="copyButton" class="button small">Copy Generated Text</button>
+</div>
+</div>
+
+
+{% endblock content %}

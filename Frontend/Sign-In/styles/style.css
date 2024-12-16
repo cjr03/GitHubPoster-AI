@@ -1,0 +1,94 @@
+/* 
+Font color:    #f0f6fc
+Border color:  #2d343c
+Light gray:    #f0f6fc
+Black:         #010409
+Button hover   #2d343c
+*/
+
+html {
+  font-size: 10px;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  color: #f0f6fc;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #010409;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 0.75;
+  margin: 50px 20px 50px 60px;
+  color: #f0f6fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=password], select, textarea {
+  width: 500px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 80px;
+  display: inline-block;
+  text-color: #010409;
+}
+
+input[type=submit] {
+  background-color: #010409;
+  color: white;
+  padding: 12px 20px;
+  border-style: solid;
+  border-color: #2d343c;
+  border-width: 1px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #2d343c;
+}
+
+.container {
+  border-style: solid none solid none;
+  border-color: #2d343c;
+  border-width: 1px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 0.75;
+}
+
+.col-25 {
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: calc(100% - 300px);
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}

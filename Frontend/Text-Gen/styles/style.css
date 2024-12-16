@@ -1,0 +1,266 @@
+/* Reset styles and base settings */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  color: #f0f6fc;
+  transition: 0.3s all ease-in-out;
+}
+
+/* General body styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d1117;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.6rem; /* Adjust font size for better scaling */
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  background-color: #010409;
+  color: #f0f6fc;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #2d343c;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 0.75;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Main content */
+main {
+  padding: 120px 20px 20px; /* Padding to avoid overlap with fixed header */
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Footer styling */
+footer {
+  background-color: #010409;
+  color: #f0f6fc;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #2d343c;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Buttons */
+.button {
+  border: 1px solid #2d343c;
+  border-radius: 8px;
+  color: #f0f6fc;
+  background-color: #0d1117;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button:hover {
+  background-color: #2d343c;
+  color: white;
+}
+
+.button1 {
+  margin: 30px auto 140px;
+}
+
+.button2 {
+  border-radius: 100px;
+  padding: 15px 24px;
+  font-size: 25px;
+  font-weight: 50;
+  margin-right: 9px;
+  margin-bottom: 10px;
+}
+
+/* Login button */
+.login {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 10;
+  margin-right: 9px;
+  margin-top: 10px;
+}
+
+/* Fixed header */
+.top {
+  width: 100%;
+  position: fixed; 
+  background-color: #010409;
+  height: 55px;
+  border-bottom: 1px solid #2d343c;
+}
+
+.buffer {
+  height: 55px;
+}
+
+.footer {
+  position: fixed; 
+  bottom: 0;
+  right: 0;
+}
+
+/* Layout for columns */
+.column {
+  float: left;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+textarea {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #2d343c;
+}
+
+.selector {
+  margin-bottom: 20px;
+}
+
+/* Generated Text Box */
+.generated {
+  width: 99%;
+  height: 150px;
+  resize: none;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid #2d343c;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.description {
+  margin: 0px 0px 0px 30px;
+}
+
+.dropdown {
+  margin: 0px 0px 0px 30px;
+}
+
+.otherBox {
+  margin: 10px 0px 0px 30px;
+  display: none;
+}
+
+.btn-group {
+  margin: 0px 50px;
+}
+
+.btn-group button {
+  background-color: #010409;
+  border: 1px solid #2d343c;
+  color: #f0f6fc;
+  padding: 15px 24px;
+  cursor: pointer;
+  width: 50%;
+  display: block;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 200;
+  line-height: 0.75;
+  color: #f0f6fc;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-group button:hover {
+  background-color: #2d343c;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+
+  .selector h1 {
+    font-size: 1.4rem;
+  }
+
+  textarea.description, .dropdown {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .generated {
+    height: 120px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 1;
+    width: 100%;
+  }
+}

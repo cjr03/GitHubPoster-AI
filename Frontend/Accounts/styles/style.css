@@ -1,0 +1,56 @@
+/* 
+Font color:    #f0f6fc
+Border color:  #2d343c
+Light gray:    #f0f6fc
+Black:         #010409
+Button hover   #2d343c
+*/
+
+html {
+  font-size: 10px;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  color: #010409;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #010409;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 0.75;
+  margin: 50px 20px 50px 60px;
+  color: #f0f6fc;
+}
+
+.btn-group{
+  margin: 0px 50px;
+}
+
+.btn-group button {
+  background-color: #010409;
+  border: 1px solid #2d343c;
+  color: #f0f6fc;
+  padding: 20px 24px 20px 24px;
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  font-size: 30px;
+  text-align: left;
+  font-weight: 200;
+  line-height: 0.75;
+  color: #f0f6fc;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #2d343c;
+}
