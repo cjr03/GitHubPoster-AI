@@ -4,6 +4,7 @@ AI powered Web Application for generating professional and customizable social m
 * Effortless Post Generation.
 * Customizable Tone, Audience, and Style.
 * Powered by OpenAI & GitHub.
+
 ![Django](https://img.shields.io/badge/Django-green)
 ![React](https://img.shields.io/badge/React-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
