@@ -6,7 +6,6 @@ AI powered Web Application for generating professional and customizable social m
 * Powered by OpenAI & GitHub.
 
 ![Django](https://img.shields.io/badge/Django-green)
-![React](https://img.shields.io/badge/React-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
 ![HTML](https://img.shields.io/badge/HTML-orange)
 ![CSS](https://img.shields.io/badge/CSS-blue)
