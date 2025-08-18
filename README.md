@@ -5,7 +5,7 @@
 ![CSS](https://img.shields.io/badge/CSS-blue)
 ![OpenAI API](https://img.shields.io/badge/OpenAI_API-green)
 ![GitHub API](https://img.shields.io/badge/GitHub_API-purple)
-![MySQL](https://img.shields.io/badge/My-SQL-darkorange?labelColor=lightblue)
+![MySQL](https://img.shields.io/badge/My-SQL-darkorange?labelColor=blue)
 
 AI powered Web Application for generating professional and customizable social media posts for GitHub repositories.
 * User Account's Linked to GitHub Account.
