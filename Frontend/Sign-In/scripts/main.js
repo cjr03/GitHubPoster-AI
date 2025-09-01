@@ -1,13 +1,8 @@
 console.log("Script loaded");
 
-const newButton = document.querySelector("button.button1");
-const helpButton = document.querySelector("button.button2");
+const submitButton = document.querySelector("button.submit");
 
-newButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function () {
   window.open(
-    "http://make-everything-ok.com/", "_blank");
-});
-
-helpButton.addEventListener("click", function () {
-  alert("Help me");
+    "../Text-Gen/index.html", "_blank");
 });
