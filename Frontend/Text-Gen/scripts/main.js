@@ -1,9 +1,8 @@
 console.log("Script loaded");
 
-const newButton = document.querySelector("button.button1");
+const generateButton = document.querySelector("button.generate");
 const accountButton = document.querySelector("button.account");
 const LogOutButton = document.querySelector("button.logout");
-const helpButton = document.querySelector("button.button2");
 
 accountButton.addEventListener("click", function () {
   window.open(
