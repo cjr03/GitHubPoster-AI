@@ -17,7 +17,7 @@ SignInButton.addEventListener("click", function () {
 
 SingOutButton.addEventListener("click", function () {
   window.open(
-    "../Sign-Out/index.html", "_self");
+    "../Sign-Up/index.html", "_self");
 });
 
 helpButton.addEventListener("click", function () {
