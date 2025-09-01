@@ -12,7 +12,7 @@
 ## Table of Contents
 
 - [Overview](#Overview)
-- [Features, Screenshots, & GIFS](#Features,-Screenshots,--GIFS)
+- [Features, Screenshots, & GIFS](#Features-Screenshots--GIFS)
 - [Repository Structure](#Repository-Structure)
 - [Demo Workflow](#Demo-Workflow)
 - [Technologies](#Technologies)
