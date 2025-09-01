@@ -1,4 +1,4 @@
-/* Reset styles and base settings */
+/*
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +8,6 @@
   transition: 0.3s all ease-in-out;
 }
 
-/* General body styling */
 html, body {
   margin: 0;
   padding: 0;
@@ -16,11 +15,11 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 1.6rem; /* Adjust font size for better scaling */
+  font-size: 1.6rem; 
   line-height: 1.6;
 }
 
-/* Header styling */
+
 header {
   background-color: #010409;
   color: #f0f6fc;
@@ -47,14 +46,14 @@ header h2 {
   line-height: 1;
 }
 
-/* Main content */
+
 main {
-  padding: 120px 20px 20px; /* Padding to avoid overlap with fixed header */
+  padding: 120px 20px 20px;
   text-align: center;
   flex-grow: 1;
 }
 
-/* Footer styling */
+
 footer {
   background-color: #010409;
   color: #f0f6fc;
@@ -71,7 +70,7 @@ footer p {
   margin: 0;
 }
 
-/* Buttons */
+
 .button {
   border: 1px solid #2d343c;
   border-radius: 8px;
@@ -105,7 +104,7 @@ footer p {
   margin-bottom: 10px;
 }
 
-/* Login button */
+
 .login {
   position: fixed; 
   top: 0;
@@ -118,7 +117,7 @@ footer p {
   margin-top: 10px;
 }
 
-/* Fixed header */
+
 .top {
   width: 100%;
   position: fixed; 
@@ -137,7 +136,7 @@ footer p {
   right: 0;
 }
 
-/* Layout for columns */
+
 .column {
   float: left;
 }
@@ -150,7 +149,7 @@ footer p {
   width: 40%;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -170,7 +169,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-/* Generated Text Box */
+
 .generated {
   width: 99%;
   height: 150px;
@@ -227,7 +226,7 @@ textarea {
   background-color: #2d343c;
 }
 
-/* Media queries for responsive design */
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem;
@@ -264,3 +263,278 @@ textarea {
     width: 100%;
   }
 }
+*/
+
+/* ===========================
+   Base + Reset Styles
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  color: #f0f6fc;
+}
+
+html {
+  font-size: 10px;
+  background-color: #0d1117;
+}
+
+body {
+  background-color: #010409;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===========================
+   Header + Branding
+=========================== */
+header {
+  background-color: #010409;
+  border-bottom: 1px solid #2d343c;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 0.75;
+  color: #f0f6fc;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #f0f6fc;
+  margin: 5px 0 0;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.buffer {
+  height: 120px; /* Push down content below fixed header */
+}
+
+/* ===========================
+   Typography
+=========================== */
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 30px 20px;
+  text-align: left;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+.button {
+  border: 1px solid #2d343c;
+  border-radius: 8px;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.button:hover {
+  background-color: #2d343c;
+  color: #fff;
+}
+
+.button1 {
+  margin: 30px auto 140px;
+  display: block;
+}
+
+.button2 {
+  border-radius: 100px;
+  padding: 15px 24px;
+  font-size: 2rem;
+  margin-right: 9px;
+  margin-bottom: 10px;
+}
+
+.login {
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ===========================
+   Layout
+=========================== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.column {
+  padding: 10px;
+}
+
+.left {
+  flex: 3;
+  min-width: 300px;
+}
+
+.right {
+  flex: 2;
+  min-width: 250px;
+}
+
+/* Clear floats (legacy support) */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ===========================
+   Form Inputs
+=========================== */
+input[type=text], input[type=password], select, textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  border: 1px solid #2d343c;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  font-size: 1.4rem;
+}
+
+textarea.description,
+textarea#hashtags {
+  height: 120px;
+}
+
+textarea.generated {
+  width: 100%;
+  height: 180px;
+  resize: none;
+  background-color: #0d1117;
+  border: 1px solid #2d343c;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ===========================
+   Selector Groups
+=========================== */
+.selector {
+  margin: 20px 0;
+}
+
+.dropdown {
+  margin-top: 10px;
+}
+
+.otherBox {
+  margin-top: 10px;
+  display: none;
+}
+
+/* ===========================
+   Button Groups
+=========================== */
+.btn-group {
+  margin: 20px 0;
+}
+
+.btn-group button {
+  background-color: #010409;
+  border: 1px solid #2d343c;
+  color: #f0f6fc;
+  padding: 15px 24px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: left;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #2d343c;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #010409;
+  border-top: 1px solid #2d343c;
+  color: #f0f6fc;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+  margin-top: auto;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  header h2 {
+    font-size: 1.6rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .button {
+    font-size: 1.4rem;
+    padding: 10px 16px;
+  }
+}
+
