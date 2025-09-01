@@ -9,12 +9,6 @@ accountButton.addEventListener("click", function () {
     "../Accounts/index.html", "_blank");
 });
 
-/*
-helpButton.addEventListener("click", function () {
-  alert("Help me");
-});
-*/
-
 const audienceDrop = document.getElementById("audience");
 var audience;
 var audienceOther = document.getElementById("audienceTextBox");
@@ -74,50 +68,35 @@ var text = `{
   ]
 }`;
 
-// Parse the JSON text
 const obj = JSON.parse(text);
-const repositories = obj.repositories; // Extract the repositories array
-
-// Select the button group container
+const repositories = obj.repositories;
 const btnGroup = document.querySelector('.btn-group');
 
-// Remove any existing button(s) to start fresh
 btnGroup.innerHTML = '';
 
-let activeButton = null; // Variable to track the currently active button
+let activeButton = null; 
 
 var repository;
-// Create and append a button for each repository
 repositories.forEach(repo => {
   const button = document.createElement('button');
-  button.textContent = repo.name; // Set button name
-
-  // Add click event listener to show the description in an alert
+  button.textContent = repo.name; 
   button.addEventListener('click', function () {
-    // Reset color of the previously active button
     if (activeButton) {
-      activeButton.style.backgroundColor = ''; // Reset to default color
+      activeButton.style.backgroundColor = '';
     }
-
-    // Highlight the currently clicked button
     button.style.backgroundColor = "#2d343c";
-    activeButton = button; // Update the active button reference
+    activeButton = button; 
     repository = repo;
     console.log("Current repository: ", repository.name);
-    // Show repository description
     alert(repo.description);
   });
-
-  // Append the button to the button group
   btnGroup.appendChild(button);
 });
 
-// Check the initial selection on page load
 handleAudienceChange();
 handleStyleChange();
 handleToneChange();
 
-// Add event listener to handle dropdown changes
 audienceDrop.addEventListener("change", handleAudienceChange);
 styleDrop.addEventListener("change", handleStyleChange);
 toneDrop.addEventListener("change", handleToneChange);
@@ -129,15 +108,15 @@ async function generateDescription(data) {
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // Django expects form data
+                'Content-Type': 'application/x-www-form-urlencoded', 
             },
-            body: new URLSearchParams(data), // Convert the data object to URL-encoded string
+            body: new URLSearchParams(data),
         });
 
         if (response.ok) {
             const result = await response.json();
             console.log('Generated Description:', result.description);
-            document.getElementById('descriptionOutput').textContent = result.description; // Display result
+            document.getElementById('descriptionOutput').textContent = result.description; 
         } else {
             console.error('Error generating description:', response.status);
         }
