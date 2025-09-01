@@ -36,9 +36,9 @@ h1 {
   border: 1px solid #2d343c;
   color: #f0f6fc;
   padding: 20px 24px 20px 24px;
-  cursor: pointer; /* Pointer/hand icon */
-  width: 50%; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
+  cursor: pointer; 
+  width: 50%; 
+  display: block;
   font-size: 30px;
   text-align: left;
   font-weight: 200;
@@ -47,10 +47,9 @@ h1 {
 }
 
 .btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
+  border-bottom: none; 
 }
 
-/* Add a background color on hover */
 .btn-group button:hover {
   background-color: #2d343c;
 }
