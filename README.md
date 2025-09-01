@@ -38,9 +38,6 @@ Automates is a web application that helps developers turn their GitHub projects 
 
 ## Features, Screenshots, & GIFS
 
-### Home Page
-<img src="/docs/home.png" width="600px">
-
 1. **Customizable Parameters**
 - Users can add an optional description
 - Style: Professional, Academic, Casual, or Other
@@ -64,6 +61,9 @@ Automates is a web application that helps developers turn their GitHub projects 
 | Login Screen | Sign Up Screen | Account Management |
 |--------------|----------------|--------------------|
 | <img src="/docs/signin.png" width="300px"> | <img src="/docs/signup.png" width="300px"> | <img src="/docs/acctmgmt.png" width="300px"> |
+
+### Home Page
+<img src="/docs/home.png" width="600px">
 
 ---
 
@@ -119,6 +119,6 @@ Frontend/
 
 ## Technologies
 
-**Backend**: Python, Django, SQLite
-**Frontend**: HTML, CSS, JavaScript
-**APIs**: GitHub API, OpenAI API
+- **Backend**: Python, Django, SQLite
+- **Frontend**: HTML, CSS, JavaScript
+- **APIs**: GitHub API, OpenAI API
