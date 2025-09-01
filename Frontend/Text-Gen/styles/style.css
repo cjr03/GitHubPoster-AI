@@ -101,7 +101,7 @@ p, li {
    color: #fff; 
 } 
 
-.left .button1 { 
+.left .button.generate { 
    display: block; 
    max-width: 500px; 
    width: 100%; 
