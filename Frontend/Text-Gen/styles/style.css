@@ -142,7 +142,10 @@ p, li {
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px;
-  gap: 30px; /* reduced gap */
+  gap: 30px;
+
+  max-width: 1200px; /* keeps layout from being too wide */
+  margin: 0 auto;   /* centers the row */
 }
 
 .column {
