@@ -28,7 +28,7 @@ header {
   background-color: #010409;
   border-bottom: 1px solid #2d343c;
   text-align: center;
-  padding: 20px 60px;
+  padding: 15px 40px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -42,19 +42,19 @@ header {
 }
 
 header h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 600;
-  line-height: 0.75;
+  line-height: 1;
   color: #f0f6fc;
   margin: 0;
 }
 
 header h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   color: #f0f6fc;
-  margin: 5px 0 0;
+  margin-top: 4px;
 }
 
 header .account-buttons {
@@ -63,34 +63,34 @@ header .account-buttons {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 header .account-buttons .button {
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-size: 1.2rem;
   border-radius: 5px;
 }
 
 /* Buffer to prevent overlap with fixed header */
 .buffer {
-  height: 140px;
+  height: 100px; /* was 140px → tighter */
 }
 
 /* ===========================
    Typography
 =========================== */
 h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 600;
-  margin: 30px 20px;
+  margin: 20px 0 10px 0;
   text-align: left;
 }
 
 p, li {
-  font-size: 1.6rem;
-  line-height: 2;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
 }
 
 /* ===========================
@@ -101,8 +101,8 @@ p, li {
   border-radius: 8px;
   background-color: #0d1117;
   color: #f0f6fc;
-  padding: 12px 24px;
-  font-size: 1.6rem;
+  padding: 10px 20px;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -116,20 +116,20 @@ p, li {
 
 .button1 {
   display: block;
-  margin: 30px auto 140px auto; /* centered */
+  margin: 20px auto 60px auto; /* reduced space */
 }
 
 .button2 {
   border-radius: 100px;
-  padding: 15px 24px;
-  font-size: 2rem;
-  margin-right: 9px;
-  margin-bottom: 10px;
+  padding: 12px 20px;
+  font-size: 1.8rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .login {
   border-radius: 5px;
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -141,12 +141,12 @@ p, li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
-  gap: 40px;
+  padding: 15px;
+  gap: 30px; /* reduced gap */
 }
 
 .column {
-  padding: 10px;
+  padding: 5px;
 }
 
 .left {
@@ -175,38 +175,39 @@ select,
 textarea {
   width: 100%;
   max-width: 500px; /* unified width */
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #2d343c;
   border-radius: 4px;
   resize: vertical;
   background-color: #0d1117;
   color: #f0f6fc;
   font-size: 1.4rem;
+  margin-bottom: 12px; /* compact spacing */
 }
 
 textarea.description,
 textarea#hashtags {
-  height: 120px;
+  height: 100px;
 }
 
 textarea.generated {
   width: 100%;
-  max-width: 500px; /* aligned with left column */
-  height: 180px;
+  max-width: 500px;
+  height: 160px;
   resize: none;
   background-color: #0d1117;
   border: 1px solid #2d343c;
   border-radius: 5px;
-  padding: 12px;
+  padding: 10px;
   font-size: 1.4rem;
-  margin-top: 20px;
+  margin-top: 15px;
   overflow-y: auto;
 }
 
 label {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: block;
 }
 
@@ -214,15 +215,15 @@ label {
    Selector Groups
 =========================== */
 .selector {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .dropdown {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .otherBox {
-  margin-top: 10px;
+  margin-top: 8px;
   display: none;
 }
 
@@ -230,7 +231,7 @@ label {
    Button Groups (Repo select)
 =========================== */
 .btn-group {
-  margin: 20px 0;
+  margin: 15px 0;
   max-width: 500px; /* align with textareas */
 }
 
@@ -240,9 +241,9 @@ label {
   background-color: #010409;
   border: 1px solid #2d343c;
   color: #f0f6fc;
-  padding: 15px 24px;
+  padding: 12px 20px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-align: left;
   font-weight: 500;
   transition: background-color 0.3s ease;
@@ -260,8 +261,8 @@ footer {
   border-top: 1px solid #2d343c;
   color: #f0f6fc;
   text-align: center;
-  padding: 15px;
-  font-size: 1.4rem;
+  padding: 12px;
+  font-size: 1.3rem;
   margin-top: auto;
 }
 
@@ -270,16 +271,17 @@ footer {
 =========================== */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 
   header h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .row {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .left, .right {
@@ -289,7 +291,7 @@ footer {
   }
 
   .button {
-    font-size: 1.4rem;
-    padding: 10px 16px;
+    font-size: 1.3rem;
+    padding: 8px 14px;
   }
 }
