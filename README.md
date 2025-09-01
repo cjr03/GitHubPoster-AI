@@ -48,14 +48,14 @@ Automates is a web application that helps developers turn their GitHub projects 
 - Tone: Formal, Friendly, Casual, or Other
 - Users can review and edit generated posts
 
-<img src="/docs/param.png" width="600px">
+<img src="/docs/param.png" width="800px">
 
 2. **Text Generation**
 - Input from GitHub projects and user preference
 - Submit to AI for automatic post creation
 - Faster than manually writing a post
 
-<img src="/docs/text_gen.gif" width="600px">
+<img src="/docs/text_gen.gif" width="800px">
 
 3. **User Accounts**
 - Login, Logout, Sign Up, and Account management supported
@@ -63,7 +63,7 @@ Automates is a web application that helps developers turn their GitHub projects 
 
 | Login Screen | Sign Up Screen | Account Management |
 |--------------|----------------|--------------------|
-| <img src="/docs/login.png" width="300px"> | <img src="/docs/signup.png" width="300px"> | <img src="/docs/acctmgmt.png" width="300px"> |
+| <img src="/docs/signin.png" width="300px"> | <img src="/docs/signup.png" width="300px"> | <img src="/docs/acctmgmt.png" width="300px"> |
 
 ---
 
