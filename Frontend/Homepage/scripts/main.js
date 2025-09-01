@@ -21,5 +21,5 @@ SingOutButton.addEventListener("click", function () {
 });
 
 helpButton.addEventListener("click", function () {
-  alert("Help me");
+  alert("Click Sing Up to make an account, Sign In to sign into an account, and New Project to create a new post.");
 });
