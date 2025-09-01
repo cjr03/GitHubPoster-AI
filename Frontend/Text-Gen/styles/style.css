@@ -114,10 +114,13 @@ p, li {
   color: #fff;
 }
 
-.button1 {
+.left .button1 {
   display: block;
-  margin: 20px auto 60px auto; /* reduced space */
+  margin: 30px auto 140px auto; 
+  max-width: 500px;             
+  width: 100%;
 }
+
 
 .button2 {
   border-radius: 100px;
