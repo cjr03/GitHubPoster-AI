@@ -1,12 +1,18 @@
 console.log("Script loaded");
 
 const newButton = document.querySelector("button.button1");
-const accountButton = document.querySelector("button.login");
+const accountButton = document.querySelector("button.account");
+const LogOutButton = document.querySelector("button.logout");
 const helpButton = document.querySelector("button.button2");
 
 accountButton.addEventListener("click", function () {
   window.open(
     "../Accounts/index.html", "_blank");
+});
+
+LogOutButton.addEventListener("click", function () {
+  window.open(
+    "../Homepage/index.html", "_blank");
 });
 
 const audienceDrop = document.getElementById("audience");
