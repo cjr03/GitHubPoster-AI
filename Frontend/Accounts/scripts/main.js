@@ -1,13 +1,14 @@
 console.log("Script loaded");
 
-const newButton = document.querySelector("button.button1");
-const helpButton = document.querySelector("button.button2");
+const SignOutButton = document.querySelector("button.signout");
+const DeleteButton = document.querySelector("button.delete");
 
-newButton.addEventListener("click", function () {
+SignOutButton.addEventListener("click", function () {
   window.open(
-    "http://make-everything-ok.com/", "_blank");
+    "../Homepage/index.html", "_blank");
 });
 
-helpButton.addEventListener("click", function () {
-  alert("Help me");
+DeleteButton.addEventListener("click", function () {
+  window.open(
+    "../Homepage/index.html", "_blank");
 });
