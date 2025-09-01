@@ -27,6 +27,18 @@ h1 {
   color: #f0f6fc;
 }
 
+.button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
 * {
   box-sizing: border-box;
 }
