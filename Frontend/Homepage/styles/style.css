@@ -1,21 +1,29 @@
-/* 
-Font color:    #f0f6fc
-Border color:  #2d343c
-Light gray:    #f0f6fc
-Black:         #010409
-*/
-
-html {
-  font-size: 10px;
+/* ===========================
+   Reset + Base Styles
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   color: #f0f6fc;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 10px;
+  background-color: #0d1117;
 }
 
+body {
+  background-color: #010409;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===========================
+   Header
+=========================== */
 header {
   background-color: #010409;
   border-bottom: 1px solid #2d343c;
@@ -25,6 +33,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,96 +72,76 @@ header .account-buttons .button {
   border-radius: 5px;
 }
 
-h1 {
-  font-size: 60px;
-  text-align: center;
-  font-weight: 600;
-  line-height: 0.75;
-  bottom-padding: 0px;
-  color: #f0f6fc;
-}
-
-h2 {
-  font-size: 20px;
-  text-align: center;
-  font-weight: 400;
-  line-height: 1;
-  color: #f0f6fc;
-}
-
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-
-html {
-  background-color: #0d1117;
-}
-
-.brand {
-  height: 200px;
-  margin: 0px auto;
-  background-color: #010409;
-  padding: 50px 0 50px 0;
-  border-bottom: 1px solid #2d343c;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
-
+/* ===========================
+   Buttons
+=========================== */
 .button {
   border: 1px solid #2d343c;
   border-radius: 8px;
-  color: #f0f6fc;
   background-color: #0d1117;
-  padding: 16px 32px;
+  color: #f0f6fc;
+  padding: 10px 20px;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
-  display: block;
-  font-size: 16px;
-  transition-duration: 0.4s;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #2d343c;
-  color: white;
+  color: #fff;
 }
 
+/* Big action button (New Project) */
 .button1 {
-  margin: 30px auto 140px;
+  display: block;
+  margin: 140px auto 0 auto; /* centers below header */
+  padding: 14px 28px;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.button2{
-  border-radius: 100px;
-  padding: 15px 24px;
-  font-size: 25px;
-  font-weight: 50;
-  margin-right: 9px;
-  margin-bottom: 10px;
+/* Small round button (footer help) */
+.button2 {
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
-.login{
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 12px;
-  font-weight: 10;
-  margin-right: 9px;
-  margin-top: 10px;
+/* ===========================
+   Layout Wrappers
+=========================== */
+.div.lower {
+  text-align: center;
 }
 
-.top{
-  position: fixed; 
-  top: 0;
-  right: 0;
+.div.footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
-.footer{
-  position: fixed; 
-  bottom: 0;
-  right: 0;
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3.8rem;
+  }
+
+  header h2 {
+    font-size: 1.4rem;
+  }
+
+  .button {
+    font-size: 1.3rem;
+    padding: 8px 14px;
+  }
+
+  .button1 {
+    font-size: 1.6rem;
+    padding: 12px 20px;
+  }
 }
