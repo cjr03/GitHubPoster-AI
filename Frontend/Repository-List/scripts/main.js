@@ -10,26 +10,16 @@ var text = `{
   ]
 }`;
 
-// Parse the JSON text
 const obj = JSON.parse(text);
-const repositories = obj.repositories; // Extract the repositories array
-
-// Select the button group container
+const repositories = obj.repositories; 
 const btnGroup = document.querySelector('.btn-group');
 
-// Remove any existing button(s) to start fresh
 btnGroup.innerHTML = '';
-
-// Create and append a button for each repository
 repositories.forEach(repo => {
   const button = document.createElement('button');
-  button.textContent = repo.name; // Set button name
-
-  // Add click event listener to show the description in an alert
+  button.textContent = repo.name; 
   button.addEventListener('click', function () {
     alert(repo.description);
   });
-
-  // Append the button to the button group
   btnGroup.appendChild(button);
 });
