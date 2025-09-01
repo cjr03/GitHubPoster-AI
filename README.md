@@ -38,6 +38,9 @@ Automates is a web application that helps developers turn their GitHub projects 
 
 ## Features, Screenshots, & GIFS
 
+### Home Page
+<img src="/docs/home.png" width="450px">
+
 1. **Customizable Parameters**
 - Users can add an optional description
 - Style: Professional, Academic, Casual, or Other
@@ -45,22 +48,22 @@ Automates is a web application that helps developers turn their GitHub projects 
 - Tone: Formal, Friendly, Casual, or Other
 - Users can review and edit generated posts
 
-<img src="/docs/param.png" width="300px">
+<img src="/docs/param.png" width="450px">
 
 2. **Text Generation**
 - Input from GitHub projects and user preference
 - Submit to AI for automatic post creation
 - Faster than manually writing a post
 
-<img src="/docs/textgen.gif" width="300px">
+<img src="/docs/text_gen.gif" width="450px">
 
 3. **User Accounts**
 - Login, Logout, Sign Up, and Account management supported
 - Authenticated and stored in SQLite database
 
-| Home Page | Login Screen | Sign Up Screen | Account Management |
-|-----------|--------------|----------------|--------------------|
-| <img src="/docs/home.png" width="300px"> | <img src="/docs/login.png" width="300px"> | <img src="/docs/signup.png" width="300px"> | <img src="/docs/acctmgmt.png" width="300px"> |
+| Login Screen | Sign Up Screen | Account Management |
+|--------------|----------------|--------------------|
+| <img src="/docs/login.png" width="300px"> | <img src="/docs/signup.png" width="300px"> | <img src="/docs/acctmgmt.png" width="300px"> |
 
 ---
 
