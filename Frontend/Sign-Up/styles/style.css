@@ -1,105 +1,170 @@
-/* 
-Font color:    #f0f6fc
-Border color:  #2d343c
-Light gray:    #f0f6fc
-Black:         #010409
-Button hover   #2d343c
-*/
-
-html {
-  font-size: 10px;
+/* ===========================
+   Reset + Base
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   color: #f0f6fc;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 10px;
+  background-color: #0d1117;
+}
+
+body {
   background-color: #010409;
+  min-height: 100vh;
 }
 
-.button {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+/* ===========================
+   Header
+=========================== */
+.header {
   display: flex;
-  gap: 8px;
-  padding: 6px 12px;
-  font-size: 1.2rem;
-  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 16px 20px;
+  background-color: #161b22;
+  border-bottom: 1px solid #2d343c;
 }
 
-h1 {
-  font-size: 50px;
-  text-align: left;
-  font-weight: 600;
-  line-height: 0.75;
-  margin: 50px 20px 50px 60px;
+.logo {
+  font-size: 2.4rem;
+  font-weight: bold;
   color: #f0f6fc;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-input[type=text], input[type=password], select, textarea {
-  width: 500px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 80px;
-  display: inline-block;
-  text-color: #010409;
-}
-
-input[type=submit] {
-  background-color: #010409;
-  color: white;
-  padding: 12px 20px;
-  border-style: solid;
-  border-color: #2d343c;
-  border-width: 1px;
-  border-radius: 10px;
-  font-size: 15px;
+.account-btn {
+  position: absolute;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #238636;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
   font-weight: 600;
+  color: #fff;
   cursor: pointer;
-  float: right;
+  transition: background-color 0.25s ease;
 }
 
-input[type=submit]:hover {
-  background-color: #2d343c;
+.account-btn:hover {
+  background-color: #2ea043;
 }
 
+/* ===========================
+   Container
+=========================== */
 .container {
-  border-style: solid none solid none;
-  border-color: #2d343c;
-  border-width: 1px;
-  padding: 20px;
-  font-size: 20px;
-  text-align: left;
-  font-weight: 600;
-  line-height: 0.75;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #0d1117;
+  border: 1px solid #2d343c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #f0f6fc;
+}
+
+/* ===========================
+   Rows + Columns
+=========================== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
 .col-25 {
-  float: left;
-  width: 300px;
-  margin-top: 6px;
+  flex: 25%;
+  min-width: 120px;
+  padding-right: 10px;
 }
 
 .col-75 {
-  float: left;
-  width: calc(100% - 300px);
-  margin-top: 6px;
+  flex: 75%;
 }
 
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+/* ===========================
+   Labels
+=========================== */
+label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #c9d1d9;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2d343c;
+  border-radius: 6px;
+  background-color: #161b22;
+  font-size: 1.5rem;
+  color: #f0f6fc;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #8b949e;
+}
+
+/* ===========================
+   Submit Button
+=========================== */
+.button.submit {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: #238636;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.button.submit:hover {
+  background-color: #2ea043;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .col-25, .col-75 {
+    flex: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-title {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
 }
