@@ -2,6 +2,15 @@
 
 {% block content %}
 <!-- Home Page Content -->
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>Automates/home</title>
+</head>
+<body>
 <div class="top">
   <a href="{% url 'automates_app:logout' %}" class="button login">Logout</a>
   <button class="button login">Account</button>
@@ -13,7 +22,7 @@
   <!-- Left Column (Form Inputs) -->
   <div class="column left">
     <h1>Select Repository</h1>
-    <div class="btn-group"></div>
+  <div class="btn-group"></div>
     
     <!-- Description Selector -->
     <div class="selector">
@@ -66,12 +75,14 @@
       <button class="button button1">Generate</button>
     </form>
   </div>
-
+</div>
   <!-- Right Column (Generated Text) -->
   <div class="column right">
     <h1>Generated LinkedIn Description</h1>
     <textarea id="descriptionOutput" name="generated" class="generated" rows="15" cols="60" readonly>Text will be generated here.</textarea>
   </div>
-</div>
+<script src="scripts/main.js" defer></script>
+  </body>
+</html>
 
 {% endblock content %}
