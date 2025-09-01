@@ -1,6 +1,3 @@
-/* ===========================
-   Base + Reset Styles
-=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +18,6 @@ body {
   min-height: 100vh;
 }
 
-/* ===========================
-   Header + Branding
-=========================== */
 header {
   background-color: #010409;
   border-bottom: 1px solid #2d343c;
@@ -33,7 +27,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,14 +65,10 @@ header .account-buttons .button {
   border-radius: 5px;
 }
 
-/* Buffer to prevent overlap with fixed header */
 .buffer {
-  height: 100px; /* was 140px → tighter */
+  height: 100px; 
 }
 
-/* ===========================
-   Typography
-=========================== */
 h1 {
   font-size: 2.6rem;
   font-weight: 600;
@@ -93,9 +82,6 @@ p, li {
   letter-spacing: 0.5px;
 }
 
-/* ===========================
-   Buttons
-=========================== */
 .button {
   border: 1px solid #2d343c;
   border-radius: 8px;
@@ -136,18 +122,14 @@ p, li {
   font-weight: 500;
 }
 
-/* ===========================
-   Layout
-=========================== */
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px;
   gap: 30px;
-
-  max-width: 1200px; /* keeps layout from being too wide */
-  margin: 0 auto;   /* centers the row */
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
 .column {
@@ -164,22 +146,18 @@ p, li {
   min-width: 250px;
 }
 
-/* Clear floats (legacy support) */
 .row::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* ===========================
-   Form Inputs
-=========================== */
 input[type=text], 
 input[type=password], 
 select, 
 textarea {
   width: 100%;
-  max-width: 500px; /* unified width */
+  max-width: 500px;
   padding: 10px;
   border: 1px solid #2d343c;
   border-radius: 4px;
@@ -187,7 +165,7 @@ textarea {
   background-color: #0d1117;
   color: #f0f6fc;
   font-size: 1.4rem;
-  margin-bottom: 12px; /* compact spacing */
+  margin-bottom: 12px; 
 }
 
 textarea.description,
@@ -216,9 +194,6 @@ label {
   display: block;
 }
 
-/* ===========================
-   Selector Groups
-=========================== */
 .selector {
   margin: 15px 0;
 }
@@ -232,12 +207,9 @@ label {
   display: none;
 }
 
-/* ===========================
-   Button Groups (Repo select)
-=========================== */
 .btn-group {
   margin: 15px 0;
-  max-width: 500px; /* align with textareas */
+  max-width: 500px;
 }
 
 .btn-group button {
@@ -258,9 +230,6 @@ label {
   background-color: #2d343c;
 }
 
-/* ===========================
-   Footer
-=========================== */
 footer {
   background-color: #010409;
   border-top: 1px solid #2d343c;
@@ -271,9 +240,6 @@ footer {
   margin-top: auto;
 }
 
-/* ===========================
-   Responsive
-=========================== */
 @media (max-width: 768px) {
   header h1 {
     font-size: 3.8rem;
