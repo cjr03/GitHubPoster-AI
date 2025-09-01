@@ -117,12 +117,6 @@ header .account-buttons .button {
   text-align: center;
 }
 
-.div.footer {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
 footer { 
    background-color: #010409; 
    border-top: 1px solid #2d343c; 
