@@ -6,7 +6,7 @@ const helpButton = document.querySelector("button.button2");
 
 newButton.addEventListener("click", function () {
   window.open(
-    "../Text Gen/index.html", "_blank");
+    "../Text-Gen/index.html", "_blank");
 });
 
 accountButton.addEventListener("click", function () {
