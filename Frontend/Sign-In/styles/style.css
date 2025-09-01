@@ -130,19 +130,20 @@ input[type="password"]::placeholder {
 .button.submit {
   display: block;
   margin: 20px auto 0 auto;
-  background-color: #238636;
+  background-color: #0d1117;
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
   font-size: 1.6rem;
   font-weight: bold;
-  color: #fff;
+  color: #f0f6fc;
   cursor: pointer;
   transition: background-color 0.25s ease;
 }
 
 .button.submit:hover {
-  background-color: #2ea043;
+   background-color: #2d343c;
+   color: #fff; 
 }
 
 /* ===========================
